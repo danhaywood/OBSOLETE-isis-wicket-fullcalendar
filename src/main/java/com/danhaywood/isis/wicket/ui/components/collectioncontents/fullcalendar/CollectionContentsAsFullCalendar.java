@@ -19,30 +19,19 @@
 
 package com.danhaywood.isis.wicket.ui.components.collectioncontents.fullcalendar;
 
-import java.security.SecureRandom;
-import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import net.ftlines.wicket.fullcalendar.Config;
-import net.ftlines.wicket.fullcalendar.Event;
-import net.ftlines.wicket.fullcalendar.EventNotFoundException;
-import net.ftlines.wicket.fullcalendar.EventProvider;
 import net.ftlines.wicket.fullcalendar.EventSource;
 import net.ftlines.wicket.fullcalendar.FullCalendar;
 import net.ftlines.wicket.fullcalendar.selector.EventSourceSelector;
-
-import org.apache.wicket.extensions.ajax.markup.html.repeater.data.table.AjaxFallbackDefaultDataTable;
-import org.apache.wicket.markup.html.panel.FeedbackPanel;
-import org.apache.wicket.util.time.Duration;
-import org.joda.time.DateTime;
-import org.joda.time.LocalTime;
 
 import org.apache.isis.core.metamodel.spec.ObjectSpecification;
 import org.apache.isis.core.metamodel.spec.feature.ObjectAssociation;
 import org.apache.isis.viewer.wicket.model.models.EntityCollectionModel;
 import org.apache.isis.viewer.wicket.ui.panels.PanelAbstract;
+import org.apache.wicket.extensions.ajax.markup.html.repeater.data.table.AjaxFallbackDefaultDataTable;
+import org.apache.wicket.markup.html.panel.FeedbackPanel;
 
 /**
  * {@link PanelAbstract Panel} that represents a {@link EntityCollectionModel

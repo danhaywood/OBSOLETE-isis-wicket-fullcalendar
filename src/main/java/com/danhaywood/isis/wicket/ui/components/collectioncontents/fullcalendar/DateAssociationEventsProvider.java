@@ -94,5 +94,4 @@ public class DateAssociationEventsProvider implements EventProvider {
     public Event getEventForId(String id) throws EventNotFoundException {
         return eventById.get(id);
     }
-
 }
