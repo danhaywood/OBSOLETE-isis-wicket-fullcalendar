@@ -63,7 +63,7 @@ public class CollectionContentsAsFullCalendar extends PanelAbstract<EntityCollec
 
         final FeedbackPanel feedback = new FeedbackPanel(ID_FEEDBACK);
         feedback.setOutputMarkupId(true);
-        add(feedback);
+        addOrReplace(feedback);
 
         
         final Config config = new Config();
@@ -97,8 +97,14 @@ public class CollectionContentsAsFullCalendar extends PanelAbstract<EntityCollec
         
         final FullCalendar calendar = new FullCalendarWithEventHandling(ID_FULL_CALENDAR, config, feedback);
         calendar.setMarkupId(ID_FULL_CALENDAR);
-        add(calendar);
+        addOrReplace(calendar);
 
-        add(new EventSourceSelector(ID_SELECTOR, calendar));
+        addOrReplace(new EventSourceSelector(ID_SELECTOR, calendar));
     }
+    
+    @Override
+    protected void onModelChanged() {
+        buildGui();
+    }
+
 }

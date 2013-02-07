@@ -22,7 +22,7 @@
 
     <properties>
         <isis-viewer-wicket.version>1.1.0</isis-viewer-wicket.version>
-        <wicket-fullcalendar.version>6.0-SNAPSHOT</wicket-fullcalendar.version>
+        <wicket-fullcalendar.version>2.0</wicket-fullcalendar.version>
     </properties>
 
     <build>

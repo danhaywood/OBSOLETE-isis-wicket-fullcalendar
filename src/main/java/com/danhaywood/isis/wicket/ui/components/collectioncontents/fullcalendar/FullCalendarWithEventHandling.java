@@ -24,7 +24,8 @@ import org.apache.isis.viewer.wicket.model.models.EntityModel;
 import org.apache.isis.viewer.wicket.ui.pages.entity.EntityPage;
 
 final class FullCalendarWithEventHandling extends FullCalendar {
-    private final FeedbackPanel feedback;
+    @SuppressWarnings("unused")
+	private final FeedbackPanel feedback;
     private static final long serialVersionUID = 1L;
 
     FullCalendarWithEventHandling(String id, Config config, FeedbackPanel feedback) {
@@ -32,52 +33,9 @@ final class FullCalendarWithEventHandling extends FullCalendar {
         this.feedback = feedback;
     }
 
-//    @Override
-//    protected void onDateRangeSelected(SelectedRange range,
-//            CalendarResponse response) {
-//        info("Selected region: " + range.getStart() + " - "
-//                + range.getEnd() + " / allDay: " + range.isAllDay());
-//
-//        response.getTarget().add(feedback);
-//    }
-//
-//    @Override
-//    protected boolean onEventDropped(DroppedEvent event,
-//            CalendarResponse response) {
-//        info("Event drop. eventId: " + event.getEvent().getId()
-//                + " sourceId: " + event.getSource().getUuid()
-//                + " dayDelta: " + event.getDaysDelta()
-//                + " minuteDelta: " + event.getMinutesDelta()
-//                + " allDay: " + event.isAllDay());
-//        info("Original start time: " + event.getEvent().getStart()
-//                + ", original end time: " + event.getEvent().getEnd());
-//        info("New start time: " + event.getNewStartTime()
-//                + ", new end time: " + event.getNewEndTime());
-//
-//        response.getTarget().add(feedback);
-//        return false;
-//    }
-//
-//    @Override
-//    protected boolean onEventResized(ResizedEvent event,
-//            CalendarResponse response) {
-//        info("Event resized. eventId: " + event.getEvent().getId()
-//                + " sourceId: " + event.getSource().getUuid()
-//                + " dayDelta: " + event.getDaysDelta()
-//                + " minuteDelta: " + event.getMinutesDelta());
-//        response.getTarget().add(feedback);
-//        return false;
-//    }
-
     @Override
     protected void onEventClicked(ClickedEvent event,
             CalendarResponse response) {
-
-        final AjaxRequestTarget target = response.getTarget();
-//        response.refetchEvents();
-//        info("Event clicked. eventId: " + event.getEvent().getId()
-//                + ", sourceId: " + event.getSource().getUuid());
-        //target.add(feedback);
 
         final String oidStr = (String) event.getEvent().getPayload();
         final RootOid oid = RootOidDefault.deString(oidStr, IsisContext.getOidMarshaller());
@@ -86,13 +44,4 @@ final class FullCalendarWithEventHandling extends FullCalendar {
         throw new RestartResponseException(EntityPage.class, params);
     }
 
-//    @Override
-//    protected void onViewDisplayed(View view, CalendarResponse response) {
-//
-//        info("View displayed. viewType: " + view.getType().name()
-//                + ", start: " + view.getStart() + ", end: "
-//                + view.getEnd());
-//
-//        response.getTarget().add(feedback);
-//    }
 }
