@@ -96,7 +96,6 @@ public class CollectionContentsAsFullCalendar extends PanelAbstract<EntityCollec
         config.setAllDaySlot(true);
         
         final FullCalendar calendar = new FullCalendarWithEventHandling(ID_FULL_CALENDAR, config, feedback);
-        calendar.setMarkupId(ID_FULL_CALENDAR);
         addOrReplace(calendar);
 
         addOrReplace(new EventSourceSelector(ID_SELECTOR, calendar));
