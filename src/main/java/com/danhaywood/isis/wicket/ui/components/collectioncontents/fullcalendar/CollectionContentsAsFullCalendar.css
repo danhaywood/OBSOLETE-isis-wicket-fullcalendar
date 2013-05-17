@@ -35,4 +35,14 @@
   cursor: pointer;
 }
 
-	
+a span.ViewLinkItem.calendar {
+    background-image:url('icon_calendar_off.png');
+    background-position: center center;
+    background-repeat:no-repeat;
+}
+
+span.ViewLinkItem.calendar {
+    background-image:url('icon_calendar_on.png');
+    background-position: center center;
+    background-repeat:no-repeat;
+}

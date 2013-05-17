@@ -58,6 +58,12 @@ public class CollectionContentsAsFullCalendarFactory extends ComponentFactoryAbs
             return ApplicationAdvice.DOES_NOT_APPLY;
         }
         final EntityCollectionModel entityCollectionModel = (EntityCollectionModel) model;
+        
+        // TOFIX: because of Javascript issues, currently only works for standalone views.
+        if(!entityCollectionModel.isStandalone()) {
+            return ApplicationAdvice.DOES_NOT_APPLY;
+        }
+
         final ObjectSpecification elementSpec = entityCollectionModel.getTypeOfSpecification();
         List<ObjectAssociation> associations = elementSpec.getAssociations(OF_TYPE_DATE);
         return appliesIf(!associations.isEmpty());
