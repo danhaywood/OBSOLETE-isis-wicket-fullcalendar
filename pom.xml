@@ -21,7 +21,7 @@
     <name>Isis Wicket Viewer FullCalendar Component</name>
 
     <properties>
-        <isis-viewer-wicket.version>1.2.0-SNAPSHOT</isis-viewer-wicket.version>
+        <isis-viewer-wicket.version>1.2.0</isis-viewer-wicket.version>
         <wicket-fullcalendar.version>2.0</wicket-fullcalendar.version>
 
         <compileSource>1.6</compileSource>
