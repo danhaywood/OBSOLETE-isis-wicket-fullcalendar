@@ -1,6 +1,12 @@
 isis-wicket-fullcalendar
 ========================
 
+## DEFUNCT!!!!
+
+This extension has been superceded by [isis-wicket-fullcalendar2](https://github.com/danhaywood/isis-wicket-fullcalendar2).
+
+<hr/>
+
 [![Build Status](https://travis-ci.org/danhaywood/isis-wicket-fullcalendar.png?branch=master)](https://travis-ci.org/danhaywood/isis-wicket-fullcalendar)
 
 Extension for Apache Isis' Wicket Viewer, to render a collection of entities within a calendar.  
